@@ -1,13 +1,27 @@
 import discord
+from flask import Flask
 from discord.ext import commands
 from dotenv import load_dotenv
 import os 
 import datetime
 from zoneinfo import ZoneInfo
+import threading
 
 load_dotenv()
 
 token = os.getenv("token")
+
+app = Flask(__name__)
+
+@app.get("/")
+def index():
+    return "Bot is running..."
+
+def start_bot():
+    port = os.getenv("PORT",8080)
+    app.run(host="0.0.0.0",port=port)
+
+threading.Thread(target=start_bot,daemon=True).start()
 
 intents = discord.Intents.default()
 intents.message_content = True
