@@ -2,8 +2,21 @@ import discord
 from discord.ext import commands
 from dotenv import load_dotenv
 import os 
+from flask import Flask
 import datetime
 from zoneinfo import ZoneInfo
+from threading import Thread
+
+app = Flask(__name__)
+
+@app.route("/")
+def index():
+    return "Discord is working" , 200
+
+def start_flask():
+    app.run("0.0.0.0",8000)
+
+Thread(target=start_flask,daemon=True).start()
 
 load_dotenv()
 
