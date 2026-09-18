@@ -30,6 +30,8 @@ async def on_message(message):
             await message.reply("Yes Amen 🙏 God is indeed good!")
         elif "revy" in message.content.lower():
             await message.reply("Revy is adorable :)")
+        elif "ren" in message.content.lower():
+            await message.reply("Ren is amazing")
         elif "pray for me" in message.content.lower():
             await message.reply(
         "🙏 We are praying for you!"
@@ -127,7 +129,6 @@ async def greet(interaction:discord.Interaction,member:discord.Member,message:st
         await interaction.response.send_message(f"Hello {member.mention}")
 
 bot.run(token)
-
 
 
 
