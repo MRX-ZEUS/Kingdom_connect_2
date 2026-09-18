@@ -43,10 +43,10 @@ async def on_message(message):
             await message.reply("Yes Amen 🙏 God is indeed good!")
         elif "revy" in message.content.lower():
             await message.reply("Revy is adorable :)")
-        elif "ren" in message.content.lower():
-            await message.reply("Ren is amazing")
         elif "ren is fish" in message.content.lower().strip():
             await message.reply("Ren is a fishhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh 🐟🐟🐟")
+        elif "ren" in message.content.lower():
+            await message.reply("Ren is amazing")
         elif "pray for me" in message.content.lower():
             await message.reply(
         "🙏 We are praying for you!"
